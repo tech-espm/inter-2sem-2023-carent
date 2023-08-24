@@ -8,12 +8,12 @@
 
 ### 2023-02
 
-## Integrantes
-- [ANDREZZA HAMBURGO DE FREIRE](https://github.com/andrezzahfreire)
-- [BRUNO PIGNATARO MASSARO](https://github.com/brunomassaro10)
-- [LORENA DE OLIVEIRA GUEDES](https://github.com/lohgdds1)
-- [LUCA DE DONATO PAULILLO](https://github.com/lucaddonato)
-- [MATHEUS ASAEL SILVA MACEDO](https://github.com/M-asael)
+## Integrantes e responsabilidades
+- [ANDREZZA HAMBURGO DE FREIRE](https://github.com/andrezzahfreire) :Back-end,Documentação
+- [BRUNO PIGNATARO MASSARO](https://github.com/brunomassaro10) :Font-end, Design
+- [LORENA DE OLIVEIRA GUEDES](https://github.com/lohgdds1) :Font-end, Design
+- [LUCA DE DONATO PAULILLO](https://github.com/lucaddonato) :Back-end, Documentação
+- [MATHEUS ASAEL SILVA MACEDO](https://github.com/M-asael) :Back-end
 
 ## Descrição do Projeto
 
