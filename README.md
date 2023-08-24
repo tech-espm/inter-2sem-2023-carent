@@ -4,19 +4,31 @@
     <a href="https://www.espm.br/cursos-de-graduacao/sistemas-de-informacao/"><img src="https://avatars.githubusercontent.com/u/49880458?s=200&v=4" alt="Sistemas de Informação ESPM" style="height: 200px; width: 200px;"/></a>
 </p>
 
-# Nome do Projeto
+# Projeto CARent
 
 ### 2023-02
 
 ## Integrantes
-- [Nome do integrante 1 e link do portifólio](https://github.com/carlosrafaelgn/)
-- [Nome do integrante 2 e link do portifólio](https://github.com/carlosrafaelgn/)
-- [Nome do integrante 3 e link do portifólio](https://github.com/carlosrafaelgn/)
+- [ANDREZZA HAMBURGO DE FREIRE](https://github.com/andrezzahfreire)
+- [BRUNO PIGNATARO MASSARO](https://github.com/brunomassaro10)
+- [LORENA DE OLIVEIRA GUEDES](https://github.com/lohgdds1)
+- [LUCA DE DONATO PAULILLO](https://github.com/lucaddonato)
+- [MATHEUS ASAEL SILVA MACEDO](https://github.com/M-asael)
 
 ## Descrição do Projeto
 
-Descrição do projeto, incluindo o problema original, e o objetivo final. Pode ser em mais de um parágrafo.
+CARent - Plataforma de Aluguel de Carros entre Particulares
+O repositório do CARent abriga o código-fonte e os recursos deste projeto que visa revolucionar a forma como as pessoas compartilham seus veículos. Inspirado no bem-sucedido modelo da Airbnb, o CARent  é um serviço inovador de aluguel de carros entre indivíduos, promovendo a utilização eficiente dos recursos automotivos e fomentando a economia colaborativa. O código aqui presente engloba todo o desenvolvimento da plataforma web, desde a criação de perfis de usuários, gestão de veículos, cálculo de preços dinâmicos com base na demanda, até um sistema de avaliações transparente. O projeto busca não apenas proporcionar uma experiência de aluguel conveniente e acessível, mas também estabelecer uma comunidade de confiança entre os proprietários e locatários de veículos. Junte-se a nós nesta jornada para transformar a maneira como interagimos com a mobilidade urbana!
 
+Principais Recursos:
+
+- Registro de Usuário e Perfis: Crie sua conta, configure seu perfil e adicione detalhes sobre seus veículos disponíveis para aluguel.
+- Sistema de Reservas Inteligente: Navegue pelas opções de carros disponíveis nas datas desejadas e faça reservas de forma simples e eficiente.
+- Preços Dinâmicos e Transparentes: Utilizando algoritmos de precificação avançados, os preços são calculados com base na demanda, disponibilidade e características dos veículos.
+- Avaliações e Comentários: Promovendo a confiança na comunidade, os usuários podem avaliar e deixar comentários sobre suas experiências, ajudando outros membros na tomada de decisões informadas.
+- Sistema de Pagamentos Seguro: Integração de um método de pagamento seguro para processar as transações entre proprietários e locatários.
+
+Nossa missão com o CARent é promover a mobilidade sustentável, ao mesmo tempo, em que criamos conexões entre pessoas e viabilizamos um uso mais inteligente dos recursos automobilísticos. Seja bem-vindo para explorar, contribuir e se tornar parte desse movimento inovador!
 # Detalhes de Configuração
 
 ```
