@@ -66,20 +66,20 @@ class IndexRoute {
 	}
 
 	public async carros(req: app.Request, res: app.Response) {
-		let carros: any[];
+		let carros: any[] = [];
 
-		await app.sql.connect(async (sql) => {
+		//await app.sql.connect(async (sql) => {
 			
-			carros = await sql.query("SELECT id, nome, marca FROM carro ORDER BY nome");
+		//	carros = await sql.query("SELECT id, nome, marca FROM carro ORDER BY nome");
 
-		});
+		//});
 
 		let opcoes = {
 			titulo: "Listagem de Carros",
 			carros: carros
 		};
 
-		res.render("index/carros", opcoes);
+		res.render("index/listagem_carros", opcoes);
 	}
 }
 
