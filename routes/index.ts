@@ -41,6 +41,46 @@ class IndexRoute {
 
 		res.render("index/produtos", opcoes);
 	}
+
+	@app.http.post()
+	public async criarCarro(req: app.Request, res: app.Response) {
+		let carro = req.body;
+
+		if (!carro.nome) {
+			res.status(400).json("Nome inválido");
+			return;
+		}
+
+		if (!carro.marca) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		await app.sql.connect(async (sql) => {
+
+			await sql.query("INSERT INTO carro (nome, marca) VALUES (?, ?)", [carro.nome, carro.marca]);
+
+		});
+
+		res.json(true);
+	}
+
+	public async carros(req: app.Request, res: app.Response) {
+		let carros: any[];
+
+		await app.sql.connect(async (sql) => {
+			
+			carros = await sql.query("SELECT id, nome, marca FROM carro ORDER BY nome");
+
+		});
+
+		let opcoes = {
+			titulo: "Listagem de Carros",
+			carros: carros
+		};
+
+		res.render("index/carros", opcoes);
+	}
 }
 
 export = IndexRoute;
