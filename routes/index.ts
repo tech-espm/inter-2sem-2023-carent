@@ -13,6 +13,15 @@ class IndexRoute {
 		res.render("index/sobre", opcoes);
 	}
 
+	public async registroCarro( req: app.Request, res:app.Response){
+		let opcoes = {
+			titulo: "Registrar novo carro"
+
+		};
+
+		res.render("index/registroCarro", opcoes);
+	}
+
 	public async produtos(req: app.Request, res: app.Response) {
 		let produtoA = {
 			id: 1,
