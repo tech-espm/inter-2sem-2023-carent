@@ -77,63 +77,50 @@
 		</div>
 	</div>
 </div>
-
-
 <!-- how it works -->
 <div class="container-fluid comof">
-	<div>
-		<h2>Como Funciona</h2>
-		<img src="" alt="">
-		<p class="partetres">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima facilis in nemo rem, quaerat, quae
-			beatae
-			nisi alias sed inventore maiores, iste porro consectetur mollitia. Perferendis tempora omnis sed eos!
-		</p>
-	</div>
+	<h2>Como Funciona</h2>
 	<div class="row lpt3">
 		<div class="col-sm-4 colcf">
-			<div>
-				<div><img src="https://dreamsrent.dreamguystech.com/html/assets/img/icons/services-icon-01.svg" alt="">
-				</div>
-				<div>
-					<h3>1. Escolha os Locais</h3>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat voluptatem consequatur ad
-						eaque
-						earum, voluptatibus quis voluptate voluptas reiciendis rerum suscipit eum eius, deleniti
-						facere
-						praesentium expedita ipsa esse? Mollitia?</p>
+			<div class="borda-azul">
+				<div class="azul">
+					<div><img src="https://dreamsrent.dreamguystech.com/html/assets/img/icons/services-icon-01.svg"
+							alt=""></div>
 				</div>
 			</div>
+			<h3>1. Escolha os Locais</h3>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat voluptatem consequatur ad eaque
+				earum, voluptatibus quis voluptate voluptas reiciendis rerum suscipit eum eius, deleniti
+				facere praesentium expedita ipsa esse? Mollitia?</p>
 		</div>
 		<div class="col-sm-4 colcf">
-			<div>
-				<div><img src="https://dreamsrent.dreamguystech.com/html/assets/img/icons/services-icon-01.svg" alt="">
-				</div>
-				<div>
-					<h3>2. Locais De Coleta</h3>
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odit repellendus dignissimos
-						sed
-						veniam ducimus error cum officia optio perferendis? Voluptate nisi dignissimos illum
-						ratione,
-						cupiditate fugit hic placeat distinctio?</p>
+			<div class="borda-amarela">
+				<div class="amarelo">
+					<div><img src="https://dreamsrent.dreamguystech.com/html/assets/img/icons/services-icon-01.svg"
+							alt=""></div>
 				</div>
 			</div>
+			<h3>2. Locais De Coleta</h3>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odit repellendus dignissimos
+				sed
+				veniam ducimus error cum officia optio perferendis? Voluptate nisi dignissimos illum
+				ratione,
+				cupiditate fugit hic placeat distinctio?</p>
 		</div>
 		<div class="col-sm-4 colcf">
-			<div>
-				<div><img src="https://dreamsrent.dreamguystech.com/html/assets/img/icons/services-icon-01.svg" alt="">
-				</div>
-				<div>
-					<h3>3. Reserve Seu Carro</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum necessitatibus reprehenderit
-						deleniti illum, saepe quo quaerat neque. Nobis excepturi voluptatum iusto? A tenetur quam
-						ipsum
-						non dolorum animi vero atque!</p>
+			<div class="borda-preta">
+				<div class="preto">
+					<div><img src="https://dreamsrent.dreamguystech.com/html/assets/img/icons/services-icon-01.svg"
+							alt=""></div>
 				</div>
 			</div>
+			<h3>3. Reserve Seu Carro</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum necessitatibus reprehenderit
+				deleniti illum, saepe quo quaerat neque. Nobis excepturi voluptatum iusto? A tenetur quam
+				ipsum
+				non dolorum animi vero atque!</p>
 		</div>
-
 	</div>
-
 </div>
 <!-- explore most popular cars -->
 <div class="container-fluid">
@@ -648,16 +635,16 @@
 			}
 
 			/* Estilo para a seção de como funciona */
-			.lpt3{
+			.lpt3 {
 				display: flex;
 				justify-content: space-between;
 				align-items: flex-start;
 				margin: 20px 30px
-
 			}
 
 			.colcf {
-				flex: 0 0 31%;;
+				flex: 0 0 31%;
+				;
 				border-radius: 10px;
 				padding: 10px 10px;
 				text-align: center;
@@ -685,5 +672,86 @@
 				text-align: center;
 				max-width: 50%;
 				margin-left: 300px;
+			}
+
+			.borda-preta {
+				position: relative;
+				z-index: 2;
+				width: 90px;
+				height: 90px;
+				margin: 0 auto;
+				border: 2px dashed #333;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.preto {
+				background-color: #333;
+				padding: 8px;
+				border-radius: 50px;
+				position: relative;
+				z-index: 1;
+				width: 80%;
+				/* Use 100% da largura da borda amarela */
+				height: 80%;
+				/* Use 100% da altura da borda amarela */
+				margin: -10px;
+				/* Margem negativa para centralizar dentro da borda amarela */
+			}
+
+			.borda-amarela {
+				position: relative;
+				z-index: 2;
+				width: 90px;
+				height: 90px;
+				margin: 0 auto;
+				border: 2px dashed #ffcc00;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.amarelo {
+				background-color: #ffcc00;
+				padding: 8px;
+				border-radius: 50px;
+				position: relative;
+				z-index: 1;
+				width: 80%;
+				/* Use 100% da largura da borda amarela */
+				height: 80%;
+				/* Use 100% da altura da borda amarela */
+				margin: -10px;
+				/* Margem negativa para centralizar dentro da borda amarela */
+			}
+
+			.borda-azul {
+				position: relative;
+				z-index: 2;
+				width: 90px;
+				height: 90px;
+				margin: 0 auto;
+				border: 2px dashed #4444e0;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.azul {
+				background-color: #4444e0;
+				padding: 8px;
+				border-radius: 50px;
+				position: relative;
+				z-index: 1;
+				width: 80%;
+				/* Use 100% da largura da borda amarela */
+				height: 80%;
+				/* Use 100% da altura da borda amarela */
+				margin: -10px;
+				/* Margem negativa para centralizar dentro da borda amarela */
 			}
 		</style>
