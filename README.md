@@ -17,18 +17,17 @@
 
 ## Descrição do Projeto
 
-CARent - Plataforma de Aluguel de Carros entre Particulares
-O repositório do CARent abriga o código-fonte e os recursos deste projeto que visa revolucionar a forma como as pessoas compartilham seus veículos. Inspirado no bem-sucedido modelo da Airbnb, o CARent  é um serviço inovador de aluguel de carros entre indivíduos, promovendo a utilização eficiente dos recursos automotivos e fomentando a economia colaborativa. O código aqui presente engloba todo o desenvolvimento da plataforma web, desde a criação de perfis de usuários, gestão de veículos, cálculo de preços dinâmicos com base na demanda, até um sistema de avaliações transparente. O projeto busca não apenas proporcionar uma experiência de aluguel conveniente e acessível, mas também estabelecer uma comunidade de confiança entre os proprietários e locatários de veículos. Junte-se a nós nesta jornada para transformar a maneira como interagimos com a mobilidade urbana!
+### Principais Recursos
+- Registro de Usuário e Perfis: Crie sua conta, configure seu perfil e adicione detalhes sobre seus carros elétricos disponíveis para aluguel.
 
-Principais Recursos:
+- Sistema de Reservas Inteligente: Navegue pelas opções de carros elétricos disponíveis nas datas desejadas e faça reservas de forma simples e eficiente.
 
-- Registro de Usuário e Perfis: Crie sua conta, configure seu perfil e adicione detalhes sobre seus veículos disponíveis para aluguel.
-- Sistema de Reservas Inteligente: Navegue pelas opções de carros disponíveis nas datas desejadas e faça reservas de forma simples e eficiente.
-- Preços Dinâmicos e Transparentes: Utilizando algoritmos de precificação avançados, os preços são calculados com base na demanda, disponibilidade e características dos veículos.
-- Avaliações e Comentários: Promovendo a confiança na comunidade, os usuários podem avaliar e deixar comentários sobre suas experiências, ajudando outros membros na tomada de decisões informadas.
-- Sistema de Pagamentos Seguro: Integração de um método de pagamento seguro para processar as transações entre proprietários e locatários.
+- Avaliações e Comentários: Promovendo a confiança na comunidade, os usuários podem avaliar e deixar comentários sobre suas experiências, ajudando outros membros na tomada de decisões informadas sobre o aluguel de carros elétricos.
 
-Nossa missão com o CARent é promover a mobilidade sustentável, ao mesmo tempo, em que criamos conexões entre pessoas e viabilizamos um uso mais inteligente dos recursos automobilísticos. Seja bem-vindo para explorar, contribuir e se tornar parte desse movimento inovador!
+- Sistema de Pagamentos Seguro: Integração de um método de pagamento seguro para processar as transações entre proprietários e locatários, garantindo uma experiência financeira segura.
+
+### Missão
+Nossa missão com o CARent é promover a mobilidade sustentável através do aluguel de carros elétricos, ao mesmo tempo em que criamos conexões entre pessoas e viabilizamos um uso mais inteligente dos recursos automobilísticos. Junte-se a nós nesta jornada para transformar a maneira como interagimos com a mobilidade urbana de forma sustentável e inovadora! Explore, contribua e faça parte desse movimento verde.
 # Detalhes de Configuração
 
 ```
