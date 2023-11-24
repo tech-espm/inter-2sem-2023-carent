@@ -2,6 +2,12 @@
 
 class IndexRoute {
 	public async index(req: app.Request, res: app.Response) {
+		
+		// app.sql.connect 
+		//begin tran 
+		// commit (tran)
+		// rollback
+		
 		res.render("index/index");
 	}
 
