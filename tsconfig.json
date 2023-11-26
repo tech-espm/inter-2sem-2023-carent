@@ -8,7 +8,9 @@
 		],
 		"outDir": "src",
 		"sourceMap": true,
-		"experimentalDecorators": true
+		"experimentalDecorators": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true
 	},
 	"exclude": [
 		"node_modules",

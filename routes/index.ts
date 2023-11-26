@@ -28,36 +28,8 @@ class IndexRoute {
 		res.render("index/registroCarro", opcoes);
 	}
 
-	public async produtos(req: app.Request, res: app.Response) {
-		let produtoA = {
-			id: 1,
-			nome: "Produto A",
-			valor: 25
-		};
-
-		let produtoB = {
-			id: 2,
-			nome: "Produto B",
-			valor: 15
-		};
-
-		let produtoC = {
-			id: 3,
-			nome: "Produto C",
-			valor: 100
-		};
-
-		let produtosVindosDoBanco = [ produtoA, produtoB, produtoC ];
-
-		let opcoes = {
-			titulo: "Listagem de Produtos",
-			produtos: produtosVindosDoBanco
-		};
-
-		res.render("index/produtos", opcoes);
-	}
-
 	@app.http.post()
+	@app.route.formData()
 	public async criarCarro(req: app.Request, res: app.Response) {
 		let carro = req.body;
 
@@ -71,9 +43,23 @@ class IndexRoute {
 			return;
 		}
 
+		if (!req.uploadedFiles || !req.uploadedFiles.foto || req.uploadedFiles.foto.mimetype !== "image/jpeg") {
+			res.status(400).json("Foto inválida");
+			return;
+		}
+		let foto = req.uploadedFiles.foto;
+
 		await app.sql.connect(async (sql) => {
 
+			await sql.beginTransaction();
+
 			await sql.query("INSERT INTO carro (nome, marca) VALUES (?, ?)", [carro.nome, carro.marca]);
+
+			let id = await sql.scalar("SELECT last_insert_id()") as number;
+
+			await app.fileSystem.saveUploadedFile("public/img/carros/" + id + ".jpg", foto);
+
+			await sql.commit();
 
 		});
 
@@ -83,11 +69,11 @@ class IndexRoute {
 	public async carros(req: app.Request, res: app.Response) {
 		let carros: any[] = [];
 
-		//await app.sql.connect(async (sql) => {
+		await app.sql.connect(async (sql) => {
 			
-		//	carros = await sql.query("SELECT id, nome, marca FROM carro ORDER BY nome");
+			carros = await sql.query("SELECT id, nome, marca FROM carro ORDER BY nome");
 
-		//});
+		});
 
 		let opcoes = {
 			titulo: "Listagem de Carros",

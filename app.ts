@@ -10,7 +10,7 @@ app.run({
 		waitForConnections: true,
 		charset: "utf8mb4",
 		host: process.env.mysqlhost,
-		port: parseInt(process.env.mysqlport),
+		port: parseInt(process.env.mysqlport as string),
 		user: process.env.mysqluser,
 		password: process.env.mysqlpassword,
 		database: process.env.mysqldatabase
