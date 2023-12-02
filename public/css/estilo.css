@@ -47,7 +47,7 @@ body {
 	height: 38px;
 	flex-shrink: 0;
 	font-family: 'Cocogoose';
-	font-size: 80px;
+	font-size: 32px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
@@ -55,4 +55,13 @@ body {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.login {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 50px;
+	margin-left: 150px;
 }
