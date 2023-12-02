@@ -39,3 +39,16 @@ body {
 .navbar {
 	padding: 2rem 1rem;
 }
+
+.carent {
+    width: 142px;
+    height: 38px;
+	font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: normal;
+    background: linear-gradient(to bottom right, rgba(79, 8, 76, 0.78) 0%, rgba(186, 36, 50, 0.78) 27%, rgba(243, 197, 49, 0.78) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, rgba(79, 8, 76, 0.78) 0%, rgba(186, 36, 50, 0.78) 27%, rgba(243, 197, 49, 0.78) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, rgba(79, 8, 76, 0.78) 0%, rgba(186, 36, 50, 0.78) 27%, rgba(243, 197, 49, 0.78) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, rgba(79, 8, 76, 0.78) 0%, rgba(186, 36, 50, 0.78) 27%, rgba(243, 197, 49, 0.78) 50%) top right / 50% 50% no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
