@@ -35,3 +35,7 @@ body {
 	color: white;
 	text-decoration: none;
 }
+
+.navbar {
+	padding: 2rem 1rem;
+}
