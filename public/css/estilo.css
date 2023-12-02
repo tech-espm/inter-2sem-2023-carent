@@ -47,11 +47,11 @@ body {
 	height: 38px;
 	flex-shrink: 0;
 	font-family: 'Cocogoose';
-	font-size: 32px;
+	font-size: 80px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	background: linear-gradient(90deg, rgba(79, 8, 76, 0.78) -1.37%, rgba(186, 36, 50, 0.78) 43.59%, rgba(243, 197, 49, 0.78) 92.25%);
+	background: linear-gradient(to right, rgba(79, 8, 76, 0.78), rgba(186, 36, 50, 0.78), rgba(243, 197, 49, 0.78));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
