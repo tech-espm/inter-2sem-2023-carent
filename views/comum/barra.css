@@ -1,0 +1,25 @@
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #1180ef; /* Cor de fundo da barra de navegação */
+}
+
+/* Estilos para o texto do link na barra de navegação */
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Estilos para o link ativo na barra de navegação */
+.navbar-nav .nav-link.active {
+    color: #ffcc00; /* Cor do texto do link ativo */
+}
+
+/* Estilos para o botão de alternar na barra de navegação */
+.navbar-toggler {
+    border-color: #ffffff; /* Cor da borda do botão */
+}
+
+/* Estilos para o ícone do botão de alternar na barra de navegação */
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Cor do ícone */
+}
