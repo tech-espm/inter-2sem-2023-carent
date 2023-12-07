@@ -71,7 +71,9 @@ body {
 	background: white;
 	color: linear-gradient(to right, rgba(79, 8, 76, 0.78), rgba(186, 36, 50, 0.78), rgba(243, 197, 49, 0.78));
 	border-color: linear-gradient(to right, rgba(79, 8, 76, 0.78), rgba(186, 36, 50, 0.78), rgba(243, 197, 49, 0.78));
-
+    background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .login:hover{
 	background: white;
