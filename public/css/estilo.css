@@ -61,25 +61,25 @@ body {
 	color: white;
 	border: none;
     background-color: black;
+	border-radius: 5px;
+	transition: border-color 0.3s ease;
 }
 .cadastra {
+	border-radius: 5px;
 	color: white;
 	border: none;
 	background: linear-gradient(to right, rgba(79, 8, 76, 0.78), rgba(186, 36, 50, 0.78), rgba(243, 197, 49, 0.78));
+	transition: border-color 0.3s ease
 }
 .cadastra:hover{
 	background: white;
-	color: linear-gradient(to right, rgba(79, 8, 76, 0.78), rgba(186, 36, 50, 0.78), rgba(243, 197, 49, 0.78));
-	border-color: linear-gradient(to right, rgba(79, 8, 76, 0.78), rgba(186, 36, 50, 0.78), rgba(243, 197, 49, 0.78));
-    background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color:rgba(186, 36, 50, 0.78);
+	border-color:rgba(186, 36, 50, 0.78);
 }
 .login:hover{
 	background: white;
 	color: black;
 	border-color: black;
-	border: 10px;
 }
 .lado{
 	margin-left: 400px;
