@@ -1,4 +1,23 @@
 
+<% for (let i = 0; i < carros.length; i++) { %>
+    <div class="card">
+        <div class="card-body">
+            <p>
+                <%= carros[i].id %>
+            </p>
+            <p>
+                <img src="/public/img/carros/<%= carros[i].id %>.jpg" />
+            </p>
+            <p>
+                <%= carros[i].nome %>
+            </p>
+            <p>
+                <%= carros[i].marca %>
+            </p>
+        </div>
+    </div>
+<% } %>
+
 <div class="container-fluid">
     <div class="row justify-content-center align-items-center" style="height:20vh;">
         <div class="banner bg-dark text-white container text-center">
