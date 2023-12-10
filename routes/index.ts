@@ -33,12 +33,57 @@ class IndexRoute {
 	public async criarCarro(req: app.Request, res: app.Response) {
 		let carro = req.body;
 
-		if (!carro.nome) {
+		if (!carro.idade) {
+			res.status(400).json("Nome inválido");
+			return;
+		}
+		
+		if (!carro.modelo) {
+			res.status(400).json("Nome inválido");
+			return;
+		}
+		
+		if (!carro.estado) {
 			res.status(400).json("Nome inválido");
 			return;
 		}
 
-		if (!carro.marca) {
+		if (!carro.cidade) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		if (!carro.tipo) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		if (!carro.montadora) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		if (!carro.portas) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		if (!carro.combustivel_tipo) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		if (!carro.quilometragem) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		if (!carro.retirada) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
+
+		if (!carro.entrega) {
 			res.status(400).json("Marca inválida");
 			return;
 		}
@@ -53,7 +98,7 @@ class IndexRoute {
 
 			await sql.beginTransaction();
 
-			await sql.query("INSERT INTO carro (nome, marca) VALUES (?, ?)", [carro.nome, carro.marca]);
+			await sql.query("INSERT INTO carro (idade, modelo, estado, cidade, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [carro.idade, carro.modelo, carro.estado, carro.cidade, carro.tipo, carro.montadora, carro.portas, carro.combustivel_tipo, carro.quilometragem, carro.retirada, carro.entrega]);
 
 			let id = await sql.scalar("SELECT last_insert_id()") as number;
 
@@ -71,7 +116,7 @@ class IndexRoute {
 
 		await app.sql.connect(async (sql) => {
 			
-			carros = await sql.query("SELECT id, nome, marca FROM carro ORDER BY nome");
+			carros = await sql.query("SELECT id, idade, modelo, estado, cidade, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega FROM carro ORDER BY id");
 
 		});
 
