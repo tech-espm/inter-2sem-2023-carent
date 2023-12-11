@@ -51,56 +51,56 @@ class IndexRoute {
 		}
 
 		if (!carro.ano) {
-			res.status(400).json("Nome inválido");
+			res.status(400).json("Ano inválido");
 			return;
 		}
 		
 		if (!carro.modelo) {
-			res.status(400).json("Nome inválido");
+			res.status(400).json("Modelo inválido");
 			return;
 		}
 		
 		if (!carro.estado) {
-			res.status(400).json("Nome inválido");
+			res.status(400).json("Estado inválido");
 			return;
 		}
 
 		if (!carro.tipo) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Tipo inválido");
 			return;
 		}
 
 		if (!carro.montadora) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Montadora inválida");
 			return;
 		}
 
 		if (!carro.portas) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Portas inválidas");
 			return;
 		}
 
 		if (!carro.combustivel_tipo) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Combustivel inválido");
 			return;
 		}
 
 		if (!carro.quilometragem) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Quilometragem inválida");
 			return;
 		}
 
 		if (!carro.retirada) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Retirada inválida");
 			return;
 		}
 
 		if (!carro.entrega) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Entrega inválida");
 			return;
 		}
 		if (!carro.valorDiaria) {
-			res.status(400).json("Marca inválida");
+			res.status(400).json("Valor inválido");
 			return;
 		}
 
