@@ -11,7 +11,7 @@ class IndexRoute {
 
 		await app.sql.connect(async (sql) => {
 			
-			carros = await sql.query("SELECT id, ano, modelo, estado, cidade, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega FROM carro ORDER BY id");
+			carros = await sql.query("SELECT id, ano, modelo, estado, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega, valorDiaria FROM carro ORDER BY id");
 
 		});
 
@@ -65,11 +65,6 @@ class IndexRoute {
 			return;
 		}
 
-		if (!carro.cidade) {
-			res.status(400).json("Marca inválida");
-			return;
-		}
-
 		if (!carro.tipo) {
 			res.status(400).json("Marca inválida");
 			return;
@@ -104,6 +99,10 @@ class IndexRoute {
 			res.status(400).json("Marca inválida");
 			return;
 		}
+		if (!carro.valorDiaria) {
+			res.status(400).json("Marca inválida");
+			return;
+		}
 
 		if (!req.uploadedFiles || !req.uploadedFiles.foto || req.uploadedFiles.foto.mimetype !== "image/jpeg") {
 			res.status(400).json("Foto inválida");
@@ -115,7 +114,11 @@ class IndexRoute {
 
 			await sql.beginTransaction();
 
-			await sql.query("INSERT INTO carro (ano, modelo, estado, cidade, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [carro.idade, carro.modelo, carro.estado, carro.cidade, carro.tipo, carro.montadora, carro.portas, carro.combustivel_tipo, carro.quilometragem, carro.retirada, carro.entrega]);
+			await sql.query(`
+				INSERT INTO carro
+				(ano, modelo, estado,tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega, valorDiaria)
+				VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+			`, [carro.ano, carro.modelo, carro.estado, carro.tipo, carro.montadora, carro.portas, carro.combustivel_tipo, carro.quilometragem, carro.retirada, carro.entrega, carro.valorDiaria]);
 
 			let id = await sql.scalar("SELECT last_insert_id()") as number;
 
@@ -133,7 +136,7 @@ class IndexRoute {
 
 		await app.sql.connect(async (sql) => {
 			
-			carros = await sql.query("SELECT id, ano, modelo, estado, cidade, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega FROM carro ORDER BY id");
+			carros = await sql.query("SELECT id, ano, modelo, estado, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega, valorDiaria FROM carro ORDER BY id");
 
 		});
 

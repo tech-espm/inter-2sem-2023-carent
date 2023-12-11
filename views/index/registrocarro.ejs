@@ -18,8 +18,8 @@
                           </div>
                           <div class="col-md-6 mb-4">
                             <div class="modeloCarro form-outline">
-                              <input type="text" id="modCarro" class="form-control form-control-lg" name="modCarro" maxlength="50" />
-                              <label class="form-label" for="modCarro">Modelo do carro </label>
+                              <input type="text" id="modelo" class="form-control form-control-lg" name="modelo" maxlength="50" />
+                              <label class="form-label" for="modelo">Modelo do carro </label>
                             </div>
                           </div>
                         </div>
@@ -57,44 +57,35 @@
                                 <option value="TO">Tocantins</option>
                             </select>
                         </div>
-                        
-                          <div class="col-md-6 mb-4">
-                            <select class="form-control rounded" name="cidade" >
-                              <option value="1">Cidade</option>
-                              <option value="2">Option 1</option>
-                              <option value="3">Option 2</option>
-                              <option value="4">Option 3</option>
-                            </select>
-        
-                          </div>
+
                         </div>
 
                         <div class="row">
                           <div class="col-md-6 mb-4">
                             <select class="form-control rounded" name="tipo">
-                                <option value="1">Tipo de carro</option>
-                                <option value="2">Sedan</option>
-                                <option value="3">SUV</option>
-                                <option value="4">Hatchback</option>
-                                <option value="5">Caminhonete</option>
-                                <option value="6">Cupê</option>
-                                <option value="7">Conversível</option>
-                                <option value="8">Minivan</option>
-                                <option value="9">Esportivo</option>
+                                <option value="">Tipo de carro</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Hatchback">Hatchback</option>
+                                <option value="Caminhonete">Caminhonete</option>
+                                <option value="Cupê">Cupê</option>
+                                <option value="Conversível">Conversível</option>
+                                <option value="Minivan">Minivan</option>
+                                <option value="Esportivo">Esportivo</option>
                             </select>
                         </div>
                         <div class="col-md-6 mb-4">
                           <select class="form-control rounded" name="montadora">
-                              <option value="1">Montadora</option>
-                              <option value="2">Toyota</option>
-                              <option value="3">Ford</option>
-                              <option value="4">Honda</option>
-                              <option value="5">Chevrolet</option>
-                              <option value="6">Volkswagen</option>
-                              <option value="7">Nissan</option>
-                              <option value="8">Hyundai</option>
-                              <option value="9">Kia</option>
-                              <option value="10">BMW</option>
+                              <option value="">Montadora</option>
+                              <option value="Toyota">Toyota</option>
+                              <option value="Ford">Ford</option>
+                              <option value="Honda">Honda</option>
+                              <option value="Chevrolet">Chevrolet</option>
+                              <option value="Volkswagen">Volkswagen</option>
+                              <option value="Nissan">Nissan</option>
+                              <option value="Hyundai">Hyundai</option>
+                              <option value="Kia">Kia</option>
+                              <option value="BMW">BMW</option>
 
                           </select>
                       </div>
@@ -103,18 +94,20 @@
                         <div class="row">
                           <div class="col-md-6 mb-4">
                             <select class="form-control rounded" name="portas">
-                              <option value="1">Quantidade de portas</option>
+                              <option value=" ">Quantidade de portas</option>
                               <option value="2">2 portas</option>
-                              <option value="3">4 portas</option>
+                              <option value="4">4 portas</option>
                             </select>
         
                           </div>
                           <div class="col-md-6 mb-4">
                             <select class="form-control rounded" name="combustivel_tipo">
-                              <option value="1">Tipo de combustível</option>
-                              <option value="2">Option 1</option>
-                              <option value="3">Option 2</option>
-                              <option value="4">Option 3</option>
+                              <option value="">Tipo de combustível</option>
+                              <option value="Elétrico">Elétrico</option>
+                              <option value="Gasolina">Gasolina</option>
+                              <option value="Etanol">Etanol</option>
+                              <option value="Híbrido">Híbrido</option>
+                              <option value="Flex">Flex</option>
                             </select>
                           </div>
                         </div>
@@ -140,12 +133,7 @@
                                 <label class="form-label" for="entrega">Local de entrega</label>
                               </div>
                             </div>
-                            <div class="descCarro col-md-6 mb-4">
-                              <div class="form-outline">
-                                <input type="text" id="descCarro" class="form-control form-control-lg" name="descCarro"/>
-                                <label class="form-label" for="descCarro">Descrição do carro</label>
-                              </div>
-                            </div>
+                            
                           </div>
                           <div class="row">
                               <div class="valorDiaria col-md-6 mb-4">
@@ -160,7 +148,7 @@
                               <h6 class="mb-0">Enviar imagens</h6>
                             </div>
                             <div class="col-md-9 pe-5">
-                              <input class="form-control rounded" id="imgCarro" type="file" name="imgCarro" accept="image/*"/>
+                              <input class="form-control rounded" id="foto" type="file" name="foto" accept="image/*"/>
                               <div class="small text-muted mt-2 ">Enviar imagens</div>
                             </div>
                         </div>
@@ -241,22 +229,24 @@
 		let opcoes = {
 			method: "POST",
 
-		    body: new FormData(form)
+		    body: new FormData(form) 
 		};
 
 		try {
 			let response = await fetch("/criarCarro", opcoes);
 
 			if (response.ok) {
+      
 				form.reset();
 				$(form).validate().resetForm();
 
-				alert("Carro criado com sucesso!");
+        await Swal.fire("Sucesso", "Carro criado com sucesso!", "success");
 			} else {
-				alert("Erro ao criar um carro!");
+				await exibirErro(response);
 			}
 		} catch (ex) {
-			alert("Erro de rede: " + ex.message);
+      
+	    await Swal.fire("Erro", "Erro de rede: " + ex.message, "error");
 		}
 	}
 </script>
