@@ -6,176 +6,169 @@
               <div class="card card-registration my-4">
                 <div class="row g-0">
                   <div class="col-xl-12">
-                    <div class="card-body p-md-5 text-black">
-                      <h3 class="mb-5 text-uppercase">Registrar novo carro </h3>
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input type="text" id="form3Example1m" class="form-control form-control-lg" name="anoCarro" />
-                            <label class="form-label" for="form3Example1m">Ano do carro</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                          <div class="form-outline">
-                            <input type="text" id="form3Example1n" class="form-control form-control-lg" name="modCarro" />
-                            <label class="form-label" for="form3Example1n">Modelo do carro </label>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <select class="form-control rounded" name="estadoCarro">
-                              <option value="">Estado</option>
-                              <option value="AC">Acre</option>
-                              <option value="AL">Alagoas</option>
-                              <option value="AP">Amapá</option>
-                              <option value="AM">Amazonas</option>
-                              <option value="BA">Bahia</option>
-                              <option value="CE">Ceará</option>
-                              <option value="DF">Distrito Federal</option>
-                              <option value="ES">Espírito Santo</option>
-                              <option value="GO">Goiás</option>
-                              <option value="MA">Maranhão</option>
-                              <option value="MT">Mato Grosso</option>
-                              <option value="MS">Mato Grosso do Sul</option>
-                              <option value="MG">Minas Gerais</option>
-                              <option value="PA">Pará</option>
-                              <option value="PB">Paraíba</option>
-                              <option value="PR">Paraná</option>
-                              <option value="PE">Pernambuco</option>
-                              <option value="PI">Piauí</option>
-                              <option value="RJ">Rio de Janeiro</option>
-                              <option value="RN">Rio Grande do Norte</option>
-                              <option value="RS">Rio Grande do Sul</option>
-                              <option value="RO">Rondônia</option>
-                              <option value="RR">Roraima</option>
-                              <option value="SC">Santa Catarina</option>
-                              <option value="SP">São Paulo</option>
-                              <option value="SE">Sergipe</option>
-                              <option value="TO">Tocantins</option>
-                          </select>
-                      </div>
-                      
-                        <div class="col-md-6 mb-4">
-                          <select class="form-control rounded" name="cidadeCarro" >
-                            <option value="1">Cidade</option>
-                            <option value="2">Option 1</option>
-                            <option value="3">Option 2</option>
-                            <option value="4">Option 3</option>
-                          </select>
-      
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <select class="form-control rounded" name="tipoCarro">
-                              <option value="1">Tipo de carro</option>
-                              <option value="2">Sedan</option>
-                              <option value="3">SUV</option>
-                              <option value="4">Hatchback</option>
-                              <option value="5">Caminhonete</option>
-                              <option value="6">Cupê</option>
-                              <option value="7">Conversível</option>
-                              <option value="8">Minivan</option>
-                              <option value="9">Esportivo</option>
-                          </select>
-                      </div>
-                      <div class="col-md-6 mb-4">
-                        <select class="form-control rounded" name="montadoraCarro">
-                            <option value="1">Montadora</option>
-                            <option value="2">Toyota</option>
-                            <option value="3">Ford</option>
-                            <option value="4">Honda</option>
-                            <option value="5">Chevrolet</option>
-                            <option value="6">Volkswagen</option>
-                            <option value="7">Nissan</option>
-                            <option value="8">Hyundai</option>
-                            <option value="9">Kia</option>
-                            <option value="10">BMW</option>
-
-                        </select>
-                    </div>
-                    
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <select class="form-control rounded" name="arCarro">
-                            <option value="1">Ar condicionado</option>
-                            <option value="2">Sim</option>
-                            <option value="3">Não</option>
-                          </select>
-      
-                        </div>
-                        <div class="col-md-6 mb-4">
-                          <select class="form-control rounded" name="qtCarro">
-                            <option value="1">Quantidade de portas</option>
-                            <option value="2">2 portas</option>
-                            <option value="3">4 portas</option>
-                          </select>
-      
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-6 mb-4">
-                          <select class="form-control rounded" name="tpCarro">
-                            <option value="1">Tipo de combustível</option>
-                            <option value="2">Option 1</option>
-                            <option value="3">Option 2</option>
-                            <option value="4">Option 3</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      
+                    <form id="form">
+                      <div class="card-body p-md-5 text-black">
+                        <h3 class="mb-5 text-uppercase">Registrar novo carro</h3>
                         <div class="row">
                           <div class="col-md-6 mb-4">
-                            <div class="form-outline">
-                              <input type="text" id="form3Example1m" class="form-control form-control-lg" name="kmCarro" />
-                              <label class="form-label" for="form3Example1m">kilometragem</label>
+                            <div class="ano carro form-outline">
+                              <input type="number" id="ano" class="form-control form-control-lg" name="ano"  />
+                              <label class="form-label" for="ano">Ano do carro</label>
                             </div>
                           </div>
                           <div class="col-md-6 mb-4">
-                            <div class="form-outline">
-                              <input type="text" id="form3Example1n" class="form-control form-control-lg" name="ltRetCarro"/>
-                              <label class="form-label" for="form3Example1n">Local de retirada </label>
+                            <div class="modeloCarro form-outline">
+                              <input type="text" id="modCarro" class="form-control form-control-lg" name="modCarro" maxlength="50" />
+                              <label class="form-label" for="modCarro">Modelo do carro </label>
                             </div>
                           </div>
                         </div>
 
                         <div class="row">
                           <div class="col-md-6 mb-4">
-                            <div class="form-outline">
-                              <input type="text" id="form3Example1m" class="form-control form-control-lg"  name="ltEntCarro"/>
-                              <label class="form-label" for="form3Example1m">Local de entrega</label>
-                            </div>
-                          </div>
-                          <div class="col-md-6 mb-4">
-                            <div class="form-outline">
-                              <input type="text" id="form3Example1n" class="form-control form-control-lg" name="descCarro"/>
-                              <label class="form-label" for="form3Example1n">Descrição do carro</label>
-                            </div>
-                          </div>
+                            <select class="form-control rounded" name="estado">
+                                <option value="">Estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
                         </div>
                         
-                      <div class="row align-items-center py-3">
-                        <div class="col-md-3 ps-5">
-                          <h6 class="mb-0">Enviar imagens</h6>
-
+                          <div class="col-md-6 mb-4">
+                            <select class="form-control rounded" name="cidade" >
+                              <option value="1">Cidade</option>
+                              <option value="2">Option 1</option>
+                              <option value="3">Option 2</option>
+                              <option value="4">Option 3</option>
+                            </select>
+        
+                          </div>
                         </div>
-                        <div class="col-md-9 pe-5">
 
-                          <input class="form-control rounded" id="formFileLg" type="file" name="imgCarro"/>
-                          <div class="small text-muted mt-2 ">Enviar imagens</div>
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <select class="form-control rounded" name="tipo">
+                                <option value="1">Tipo de carro</option>
+                                <option value="2">Sedan</option>
+                                <option value="3">SUV</option>
+                                <option value="4">Hatchback</option>
+                                <option value="5">Caminhonete</option>
+                                <option value="6">Cupê</option>
+                                <option value="7">Conversível</option>
+                                <option value="8">Minivan</option>
+                                <option value="9">Esportivo</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <select class="form-control rounded" name="montadora">
+                              <option value="1">Montadora</option>
+                              <option value="2">Toyota</option>
+                              <option value="3">Ford</option>
+                              <option value="4">Honda</option>
+                              <option value="5">Chevrolet</option>
+                              <option value="6">Volkswagen</option>
+                              <option value="7">Nissan</option>
+                              <option value="8">Hyundai</option>
+                              <option value="9">Kia</option>
+                              <option value="10">BMW</option>
+
+                          </select>
+                      </div>
+                      
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <select class="form-control rounded" name="portas">
+                              <option value="1">Quantidade de portas</option>
+                              <option value="2">2 portas</option>
+                              <option value="3">4 portas</option>
+                            </select>
+        
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <select class="form-control rounded" name="combustivel_tipo">
+                              <option value="1">Tipo de combustível</option>
+                              <option value="2">Option 1</option>
+                              <option value="3">Option 2</option>
+                              <option value="4">Option 3</option>
+                            </select>
+                          </div>
+                        </div>
+
+                          <div class="row">
+                            <div class=" km col-md-6 mb-4">
+                              <div class="form-outline">
+                                <input type="number" id="quilometragem" class="form-control form-control-lg" name="quilometragem" />
+                                <label class="form-label" for="quilometragem">Quilometragem</label>
+                              </div>
+                            </div>
+                            <div class=" ltRetirada col-md-6 mb-4">
+                              <div class="form-outline">
+                                <input type="text" id="retirada" class="form-control form-control-lg" name="retirada"/>
+                                <label class="form-label" for="retirada">Local de retirada</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="ltEntrega col-md-6 mb-4">
+                              <div class="form-outline">
+                                <input type="text" id="entrega" class="form-control form-control-lg"  name="entrega"/>
+                                <label class="form-label" for="entrega">Local de entrega</label>
+                              </div>
+                            </div>
+                            <div class="descCarro col-md-6 mb-4">
+                              <div class="form-outline">
+                                <input type="text" id="descCarro" class="form-control form-control-lg" name="descCarro"/>
+                                <label class="form-label" for="descCarro">Descrição do carro</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="valorDiaria col-md-6 mb-4">
+                                <div class="form-outline">
+                                  <input type="number" id="valorDiaria" class="form-control form-control-lg"  name="valorDiaria"/>
+                                  <label class="form-label" for="valorDiaria">Valor Diária</label>
+                                </div>
+                              </div>
+                          </div>
+                        <div class="mandarImg row align-items-center py-3">
+                            <div class="col-md-3 ps-5">
+                              <h6 class="mb-0">Enviar imagens</h6>
+                            </div>
+                            <div class="col-md-9 pe-5">
+                              <input class="form-control rounded" id="imgCarro" type="file" name="imgCarro" accept="image/*"/>
+                              <div class="small text-muted mt-2 ">Enviar imagens</div>
+                            </div>
+                        </div>
+                        <div class=" mandar d-flex justify-content-end pt-3">
+                          <button type="submit" class="btn btn-warning btn-lg ms-2" >Registrar Carro</button>
                         </div>
                       </div>
-                      <div class="d-flex justify-content-end pt-3">
-                        <button type="button" class="btn btn-warning btn-lg ms-2" onclick="registrarCarro()">Registrar </button>
-                      </div>
-      
-                    </div>
+                  </form>
                   </div>
                 </div>
               </div>
@@ -184,8 +177,88 @@
         </div>
       </section>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/localization/messages_pt_BR.min.js"></script>
 
+<script src="/public/js/fetch.js"></script>
 
+<script type="text/javascript">
+
+	$("#form").validate({
+		rules: {
+      ano: {
+				required: true
+			},
+      modelo: {
+				required: true
+			},
+      estado: {
+				required: true
+			},
+      cidade: {
+				required: true
+			},
+      tipo: {
+				required: true
+			},
+      montadora: {
+				required: true
+			},
+      portas: {
+				required: true
+			},
+      combustivel_tipo: {
+				required: true
+			},
+      quilometragem: {
+				required: true
+			},
+      retirada: {
+				required: true
+			},
+      entrega: {
+				required: true
+			},
+      valorDiaria: {
+				required: true
+			}
+		},
+
+		submitHandler: function (form) {
+			criarCarro(form);
+		}
+	});
+
+	async function criarCarro(form) {
+	
+		if (fetchAtivo) {
+		 	return;
+		 }
+
+		let opcoes = {
+			method: "POST",
+
+		    body: new FormData(form)
+		};
+
+		try {
+			let response = await fetch("/criarCarro", opcoes);
+
+			if (response.ok) {
+				form.reset();
+				$(form).validate().resetForm();
+
+				alert("Carro criado com sucesso!");
+			} else {
+				alert("Erro ao criar um carro!");
+			}
+		} catch (ex) {
+			alert("Erro de rede: " + ex.message);
+		}
+	}
+</script>
 <%- contentFor("espaco-head") %>
 
 <style>
@@ -199,4 +272,5 @@
   .card-registration .select-arrow {
   top: 13px;
   }
+  
 </style>
