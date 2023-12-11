@@ -1,4 +1,5 @@
 <% for (let i = 0; i < carros.length; i++) { %>
+    <div id="carro<%= carros[i].id %>">
         <div class=" card carro row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
             <div class="col-lg-4 col-md-6 col-12 aos-init aos-animate" data-aos="fade-down">
                 <div class="listing-item">
@@ -87,9 +88,42 @@
                 </div>
             </div>
         </div>
+    </div>
 <%  } %>
 
+<script type="text/javascript">
 
+	async function excluirCarro(id) {
+		if (!confirm("Excluir este Carro?")) {
+			return;
+		}
+
+		// A única informação enviada aqui é o id, que pode ser enviado diretamente
+		// pela query string, sem necessitar do uso do body.
+
+		// O método escolhido é DELETE, e não GET, apenas por questões semânticas,
+		// afinal GET é para obter algo sem alterações, o que não ocorre aqui! ;)
+		let opcoes = {
+			method: "DELETE"
+		};
+
+		try {
+			let response = await fetch("/excluirCarro?id=" + id, opcoes);
+
+			if (response.ok) {
+				alert("Carro excluído com sucesso!");
+
+				let carroE = document.getElementById("carro" + id);
+				document.body.removeChild(carroE);
+			} else {
+				alert("Erro ao excluir o carro!");
+			}
+		} catch (ex) {
+			alert("Erro de rede: " + ex.message);
+		}
+	}
+
+</script>
 <!-- <div class="container-fluid">
     <div class="row justify-content-center align-items-center" style="height:20vh;">
         <div class="banner bg-dark text-white container text-center">

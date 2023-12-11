@@ -2,7 +2,7 @@
 
 class IndexRoute {
 	public async index(req: app.Request, res: app.Response) {
-		
+
 		// app.sql.connect 
 		//begin tran 
 		// commit (tran)
@@ -10,7 +10,7 @@ class IndexRoute {
 		let carros: any[] = [];
 
 		await app.sql.connect(async (sql) => {
-			
+
 			carros = await sql.query("SELECT id, ano, modelo, estado, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega, valorDiaria FROM carro ORDER BY id");
 
 		});
@@ -20,7 +20,7 @@ class IndexRoute {
 			carros: carros
 		};
 
-		res.render("index/index" ,opcoes);
+		res.render("index/index", opcoes);
 	}
 
 	public async sobre(req: app.Request, res: app.Response) {
@@ -31,7 +31,7 @@ class IndexRoute {
 		res.render("index/sobre", opcoes);
 	}
 
-	public async registroCarro( req: app.Request, res:app.Response){
+	public async registroCarro(req: app.Request, res: app.Response) {
 		let opcoes = {
 			titulo: "Registrar novo carro"
 
@@ -54,12 +54,12 @@ class IndexRoute {
 			res.status(400).json("Ano inválido");
 			return;
 		}
-		
+
 		if (!carro.modelo) {
 			res.status(400).json("Modelo inválido");
 			return;
 		}
-		
+
 		if (!carro.estado) {
 			res.status(400).json("Estado inválido");
 			return;
@@ -135,7 +135,7 @@ class IndexRoute {
 		let carros: any[] = [];
 
 		await app.sql.connect(async (sql) => {
-			
+
 			carros = await sql.query("SELECT id, ano, modelo, estado, tipo, montadora, portas, combustivel_tipo, quilometragem, retirada, entrega, valorDiaria FROM carro ORDER BY id");
 
 		});
@@ -147,6 +147,40 @@ class IndexRoute {
 
 		res.render("index/listagem_carros", opcoes);
 	}
-}
+	@app.http.delete()
+	public async excluirCarro(req: app.Request, res: app.Response) {
+		let idtexto = req.query["id"] as string;
 
+		let id = parseInt(idtexto);
+
+		if (isNaN(id)) {
+			// O id fornecido não era numérico.
+			res.status(400);
+			res.json("Id inválido");
+			return;
+		}
+
+		let linhasAfetadas = 0;
+
+		await app.sql.connect(async (sql) => {
+
+			// Todas os comandos SQL devem ser executados aqui dentro do app.sql.connect().
+
+			// As interrogações serão substituídas pelos valores passados ao final, na ordem passada.
+			await sql.query("DELETE FROM carro WHERE id = ?", [id]);
+
+			linhasAfetadas = sql.affectedRows;
+
+		});
+
+		if (!linhasAfetadas) {
+			// Se o UPDATE não afetou nenhuma linha, significa que o id não existia no banco.
+			res.status(400);
+			res.json("Pessoa não encontrada");
+			return;
+		}
+
+		res.json(true);
+	}
+}
 export = IndexRoute;
