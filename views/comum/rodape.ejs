@@ -57,20 +57,14 @@
 						<h6>Connect with Us</h6>
 						<ul class="nav-social">
 							<li>
-								<a href="#" target="_blank"><i
-										class="fa-brands fa-facebook-f fa-facebook fi-icon"></i></a>
+								<a href="#" target="_blank">
+									<i class="fa fa-facebook-square"></i></a>
 							</li>
 							<li>
-								<a href="#" target="_blank"><i class="fab fa-instagram fi-icon"></i></a>
+								<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
 							</li>
 							<li>
-								<a href="#" target="_blank"><i class="fab fa-behance fi-icon"></i></a>
-							</li>
-							<li>
-								<a href="#" target="_blank"><i class="fab fa-twitter fi-icon"></i></a>
-							</li>
-							<li>
-								<a href="#" target="_blank"><i class="fab fa-linkedin fi-icon"></i></a>
+								<a href="#" target="_blank"><i class="fa fa-linkedin-square"></i></a>
 							</li>
 						</ul>
 					</div>
@@ -80,6 +74,7 @@
 	</div>
 </footer>
 
+
 <div class="rodape">
 	<a class="link-rodape" href="https://sistemasdeinformacao.espm.edu.br" target="_blank">
 		<small>Desenvolvido em 2023 pelo curso de Sistemas de Informação da ESPM</small>
@@ -87,6 +82,46 @@
 		<img src="/public/img/logo-si-512.png" style="width: 100%; max-width: 150px;" />
 	</a>
 </div>
+
+<div class="scroll-to-top" onclick="scrollToTop()">
+	<div class="progress-circle"></div>
+	<i class="fa fa-arrow-up" style="text-align: center;"></i>
+</div>
+
+
+<script>
+	window.addEventListener('scroll', function () {
+		let scrollPosition = window.scrollY;
+		let windowHeight = window.innerHeight;
+		let fullHeight = document.body.scrollHeight;
+
+		let scrolled = (scrollPosition / (fullHeight - windowHeight)) * 50;
+		document.querySelector('.scroll-to-top .progress-circle').style.clip = `rect(0, ${scrolled}px, 50px, 0)`;
+
+		let scrollToTopElement = document.querySelector('.scroll-to-top');
+
+		if (scrollPosition > windowHeight / 2 && scrollPosition + windowHeight < fullHeight) {
+			scrollToTopElement.classList.add('scrolled-up');
+		} else {
+			scrollToTopElement.classList.remove('scrolled-up');
+		}
+
+		if (scrollPosition <= 0) {
+			scrollToTopElement.style.display = 'none';
+		} else {
+			scrollToTopElement.style.display = 'block';
+		}
+	});
+
+	function scrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	}
+
+</script>
+
 <style>
 	/* Estilo para o footer */
 	.footer {
@@ -193,8 +228,84 @@
 		max-width: 150px;
 	}
 
-	h5{
+	h5 {
 		font-size: 14px;
 		color: #ffcc00;
+	}
+
+	.nav-social {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.nav-social li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.nav-social li:last-child {
+		margin-right: 0;
+	}
+
+	.nav-social a {
+		color: #FFA633;
+		font-size: 24px;
+		text-decoration: none;
+	}
+
+
+	.scroll-to-top {
+		position: fixed;
+		right: 12px;
+		bottom: 25px;
+		width: 50px;
+		height: 50px;
+		font-size: 24px;
+		color: #FFA633;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 99;
+		transition: transform 0.3s ease-out;
+	}
+
+	.scroll-to-top .progress-circle {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		border: 2px solid #FFA633;
+		clip: rect(0, 25px, 50px, 0);
+		transition: clip 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.scroll-to-top:hover .progress-circle {
+		clip: rect(0, 50px, 50px, 0);
+		transition: clip 0.3s;
+	}
+
+	.scroll-to-top i {
+		z-index: 1;
+		position: relative;
+		margin-top: 12px;
+		margin-left: 14px;
+	}
+
+	body {
+		height: 2000px;
+	}
+
+	body.scrolled-up .scroll-to-top {
+		display: block;
+	}
+
+	body.scrolled-up .scroll-to-top .progress-circle {
+		clip: rect(0, 50px, 50px, 0);
+		transition: clip 0.3s;
 	}
 </style>
