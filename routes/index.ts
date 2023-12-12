@@ -176,7 +176,7 @@ class IndexRoute {
 		if (!linhasAfetadas) {
 			// Se o UPDATE não afetou nenhuma linha, significa que o id não existia no banco.
 			res.status(400);
-			res.json("Pessoa não encontrada");
+			res.json("carro não encontrada");
 			return;
 		}
 
